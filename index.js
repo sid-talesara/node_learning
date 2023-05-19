@@ -38,7 +38,7 @@ const registerModal = mongoose.model("registeredUsers", registrationSchema);
 
 // handling get request
 app.get("/", (req, res) => {
-  res.status(200).render("index", { msg: "" });
+  res.status(200).render("index");
   console.log("Index Page served");
 });
 
@@ -57,9 +57,7 @@ app.post("/formdata", async (req, res) => {
     formData
       .save()
       .then((data) => {
-        res.render("index", {
-          msg: "This is cool, your details are successfully sent.",
-        });
+        res.render("index");
       })
       .catch((err) => {
         res.end("Some error occured");
