@@ -11,6 +11,6 @@
       "src": "/(.*)",
       "dest": "/"
     },
-    { "src": "/(.*)", "methods": ["POST"], "dest": "/formdata" }
+    { "src": "/formdata", "methods": ["POST"], "dest": "/formdata" }
   ]
 }
